@@ -24,10 +24,9 @@ console.log(typeof bigIntValue1);
 // console.log("Primitive a1:", a1);
 // console.log("Primitive b1:", b1);
 
-
 //2 Reference
 let person1 = {
-    name: "John"
+  name: "John",
 };
 
 let person2 = person1;
@@ -142,18 +141,24 @@ console.log(typeof a2);
 console.log(typeof b2);
 
 //22
+console.log("22")
 const bigNum = 9007199254740993n;
 console.log(bigNum);
+console.log(typeof bigNum);
+console.log(bigNum + 1n);
+console.log("22")
 
 //23
 let x = 10n + 10n;
 console.log(x);
 
 //24
-console.log(undefined == null);
+console.log(undefined == null); //true
+//console.log("24");
 
 //25
-console.log(undefined === null);
+console.log(undefined === null); //false 
+console.log("25" === 25); //true //false
 
 //26
 let s = "hello";
@@ -208,7 +213,7 @@ console.log("Type:", typeof result2);
 
 //34
 function isNullOrUndefined(value) {
-    return value === null || value === undefined;
+  return value === null || value === undefined;
 }
 
 console.log(isNullOrUndefined(null));
@@ -216,6 +221,8 @@ console.log(isNullOrUndefined(undefined));
 console.log(isNullOrUndefined("Hello"));
 console.log(isNullOrUndefined(100));
 
+console.log("isNullOrUndefined(false):", isNullOrUndefined(false));
+console.log("34");
 //35
 let symbol1 = Symbol("user");
 let symbol2 = Symbol("user");
@@ -264,8 +271,8 @@ console.log(`Age: ${age}, Is Student: ${isStudent}`);
 //41
 const userId = Symbol("userId");
 const user = {
-    name: "Soniya",
-    [userId]: 101
+  name: "Soniya",
+  [userId]: 101,
 };
 console.log(user.name);
 console.log(user[userId]);
@@ -278,7 +285,7 @@ console.log("Age11:", age11);
 console.log("Type:", typeof age11);
 
 if (age11 === null) {
-    console.log("Age was intentionally left empty.");
+  console.log("Age was intentionally left empty.");
 }
 
 //43
@@ -298,9 +305,9 @@ console.log("Is logged in:", isLoggedIn);
 console.log("Type:", typeof isLoggedIn);
 
 if (isLoggedIn) {
-    console.log("User is logged in.");
+  console.log("User is logged in.");
 } else {
-    console.log("User is not logged in.");
+  console.log("User is not logged in.");
 }
 
 //45
@@ -310,9 +317,9 @@ console.log("Username:", username);
 console.log("Type:", typeof username);
 
 if (typeof username === "string") {
-    console.log("Valid username type.");
+  console.log("Valid username type.");
 } else {
-    console.log("Invalid username type.");
+  console.log("Invalid username type.");
 }
 
 //46
@@ -322,7 +329,7 @@ console.log("Quantity:", quantity);
 console.log("Boolean(quantity):", Boolean(quantity));
 
 if (!quantity) {
-    console.log("Quantity is falsy.");
+  console.log("Quantity is falsy.");
 }
 
 // let quantity = 0;
