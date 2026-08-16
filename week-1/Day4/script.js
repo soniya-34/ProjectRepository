@@ -351,3 +351,41 @@ console.log(validateNumber("123"));
 console.log(validateNumber("45.5"));
 console.log(validateNumber("abc"));
 console.log(validateNumber("100abc"));
+
+//51
+function convertValue(value) {
+    // 1. null or undefined
+    if (value === null || value === undefined) {
+        return "No Value";
+    }
+
+    // 2. Empty string
+    if (value === "") {
+        return "Empty String";
+    }
+
+    // 3. Boolean
+    if (value === true || value === false) {
+        return "Boolean Value";
+    }
+
+    // 4. Try converting to number
+    let numberValue = Number(value);
+
+    if (!Number.isNaN(numberValue)) {
+        return numberValue;
+    }
+
+    // 5. Otherwise
+    return "Invalid Number";
+}
+// Function calls
+console.log(convertValue("100"));
+console.log(convertValue("25.5"));
+console.log(convertValue(""));
+console.log(convertValue(null));
+console.log(convertValue(undefined));
+console.log(convertValue(true));
+console.log(convertValue(false));
+console.log(convertValue("hello"));
+console.log(convertValue("50abc"));
